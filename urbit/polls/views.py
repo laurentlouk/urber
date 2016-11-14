@@ -37,3 +37,7 @@ def login(request):
         form = UserForm()
 
     return render(request, 'polls/login.html', {})
+
+def account(request):
+
+    return render(request, 'polls/account.html', {})
