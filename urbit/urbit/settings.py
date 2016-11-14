@@ -72,6 +72,16 @@ WSGI_APPLICATION = 'urbit.wsgi.application'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
+PASSWORD_HASHERS = [
+'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
+'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
+'django.contrib.auth.hashers.BCryptPasswordHasher',
+'django.contrib.auth.hashers.SHA1PasswordHasher',
+'django.contrib.auth.hashers.MD5PasswordHasher',
+'django.contrib.auth.hashers.CryptPasswordHasher',
+]
+
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
@@ -108,7 +118,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Paris'
 
 USE_I18N = True
 
