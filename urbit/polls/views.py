@@ -41,3 +41,7 @@ def login(request):
 def account(request):
 
     return render(request, 'polls/account.html', {})
+
+def profile(request):
+
+    return render(request, 'polls/profile.html', {})
